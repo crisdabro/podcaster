@@ -1,0 +1,8 @@
+.box-audio-player {
+  width: 100%;
+}
+
+.audio {
+  width: inherit;
+  margin: "5px";
+}

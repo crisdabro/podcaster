@@ -4,6 +4,7 @@ import { useAppDispatch, useAppSelector } from '../../helpers/hooks'
 import { getPodcasts, selectPodcasts } from '../../state/podcastsSlice'
 import PodcastsView from '../podcasts/PodcastsView'
 import PodcastDetail from '../podcasts/PodcastDetail'
+import EpisodeDetail from '../episodes/EpisodeDetail'
 import Header from '../../components/header/Header'
 
 const Home = () => {
@@ -14,8 +15,7 @@ const Home = () => {
     dispatch(getPodcasts())
     const interval = setInterval(() => {
       dispatch(getPodcasts())
-    }
-    , 86400000)
+    }, 86400000)
     return () => clearInterval(interval)
   }, [])
 
@@ -25,6 +25,10 @@ const Home = () => {
       <Routes>
         <Route path="/" element={<PodcastsView />} />
         <Route path="/podcast/:podcastId" element={<PodcastDetail />} />
+        <Route
+          path="/podcast/:podcastId/episode/:episodeId"
+          element={<EpisodeDetail />}
+        />
       </Routes>
     </>
   )
