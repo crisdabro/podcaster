@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import { useAppDispatch, useAppSelector } from '../../helpers/hooks'
 import { getPodcasts, selectPodcasts } from '../../state/podcastsSlice'
 import PodcastsView from '../podcasts/PodcastsView'
+import PodcastDetail from '../podcasts/PodcastDetail'
 import Header from '../../components/header/Header'
 
 const Home = () => {
@@ -23,6 +24,7 @@ const Home = () => {
       <Header status={status} />
       <Routes>
         <Route path="/" element={<PodcastsView />} />
+        <Route path="/podcast/:podcastId" element={<PodcastDetail />} />
       </Routes>
     </>
   )
