@@ -35,7 +35,7 @@ const EpisodesTable = ({ podcastId, episodes }: Props) => {
           <Tbody>
             {episodes.map(
               ({ episodeGuid, trackName, trackTimeMillis, releaseDate }) => (
-                <Tr key={episodeGuid}>
+                <Tr key={episodeGuid} data-testid="episode">
                   <Td>
                     <Link
                       as={RouterLink}
