@@ -24,7 +24,7 @@ const EpisodesTable = ({ podcastId, episodes }: Props) => {
   return (
     <Card className="card-table">
       <TableContainer>
-        <Table variant="simple">
+        <Table variant='striped' >
           <Thead>
             <Tr>
               <Th>Title</Th>
@@ -36,7 +36,7 @@ const EpisodesTable = ({ podcastId, episodes }: Props) => {
             {episodes.map(
               ({ episodeGuid, trackName, trackTimeMillis, releaseDate }) => (
                 <Tr key={episodeGuid} data-testid="episode">
-                  <Td>
+                  <Td w={1}>
                     <Link
                       as={RouterLink}
                       to={`/podcast/${podcastId}/episode/${episodeGuid}`}
@@ -46,8 +46,8 @@ const EpisodesTable = ({ podcastId, episodes }: Props) => {
                       </Text>
                     </Link>
                   </Td>
-                  <Td>{timestampToDate(releaseDate)}</Td>
-                  <Td>
+                  <Td w={100}>{timestampToDate(releaseDate)}</Td>
+                  <Td w={2}>
                     {convertMsToHoursMinutesSeconds(trackTimeMillis || 0)}
                   </Td>
                 </Tr>

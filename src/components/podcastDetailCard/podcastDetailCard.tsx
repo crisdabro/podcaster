@@ -24,7 +24,7 @@ const PodcastDetailCard = ({ podcast }: Props) => {
   } = podcast || {}
 
   return (
-    <Card className="card card-detail" width={300}>
+    <Card className="card-detail">
       <CardBody>
         <VStack divider={<StackDivider />} spacing="4">
           <Box>
