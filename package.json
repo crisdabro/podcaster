@@ -8,7 +8,10 @@
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "test": "jest"
+    "test": "jest",
+    "cypress": "cypress open",
+    "test:e2e": "\"test:e2e:run\" \"test:e2e:start\"",
+    "test:e2e:run": "start-server-and-test dev http://127.0.0.1:5173/ cypress"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.6.0",
@@ -17,6 +20,7 @@
     "@reduxjs/toolkit": "^1.9.5",
     "axios": "^1.4.0",
     "axios-mock-adapter": "^1.21.4",
+    "cypress": "^12.13.0",
     "framer-motion": "^10.12.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -26,8 +30,10 @@
   "devDependencies": {
     "@babel/preset-env": "^7.21.5",
     "@babel/preset-typescript": "^7.21.5",
-    "@testing-library/react": "^14.0.0",
+    "@testing-library/cypress": "^9.0.0",
+    "start-server-and-test": "^2.0.0",
     "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.5.1",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",

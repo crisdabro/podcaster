@@ -20,7 +20,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    "types": ["node", "jest"]
+    "types": ["node", "jest", "cypress"]
   },
   "include": [
     "src",
@@ -30,7 +30,8 @@
     "jest.config.ts",
     "vite.config.ts",
     "CSSStub.js",
-    "@testing-library/jest-dom"
+    "@testing-library/jest-dom",
+    "cypress.config.js"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
