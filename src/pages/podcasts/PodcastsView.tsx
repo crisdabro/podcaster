@@ -30,7 +30,7 @@ const PodcastsView = () => {
 
   return (
     <Stack>
-      <HStack justifyContent="end" style={{marginTop: "24px"}}>
+      <HStack justifyContent="end" marginTop="24px">
         <Tag size="lg" variant="solid" colorScheme="blue">
           {getFilteredPodcasts.length}
         </Tag>
@@ -40,7 +40,7 @@ const PodcastsView = () => {
           onChange={(event) => setFilter(event.target.value)}
         />
       </HStack>
-      <Grid templateColumns="repeat(4, 1fr)" gap={8} style={{marginBottom: "24px"}}>
+      <Grid templateColumns="repeat(4, 1fr)" gap={8} marginBottom="24px">
         {getFilteredPodcasts?.map((item, index: number) => {
           return (
             <GridItem key={index}  data-testid="podcast" colSpan={1} rowSpan={1}>

@@ -49,13 +49,13 @@ const EpisodeDetail = () => {
   return (
     <HStack justifyContent="space-between" alignItems="start" >
       <PodcastDetailCard podcast={podcast} />
-      <Card style={{ marginTop: '10px' }}>
+      <Card marginTop="10px">
         <CardHeader >
           <Heading as="h3" size="md">
             <Text noOfLines={1}> {podcastEpisode?.trackName}</Text>
           </Heading>
         </CardHeader>
-        <CardBody style={{ width: '100%' }}>
+        <CardBody width="100%">
           <VStack
             divider={<StackDivider />}
             alignContent="start"
