@@ -21,7 +21,3 @@ Your app is ready to be deployed!
 
 Runs the production build.\
 Open [http://127.0.0.1:4173](http://127.0.0.1:4173) to view it in the browser.
-
-## Todo
-
-#config cors for production mode
